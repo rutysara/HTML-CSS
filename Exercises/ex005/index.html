@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon-32x32.png" type="image/x-icon">
+    <title>Capitulo 8 ao Capitulo 9</title>
+</head>
+
+<body>
+    <h1>Text Format (Exercise 5)</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aliquam ratione esse. Impedit accusamus ex ipsam iusto architecto nesciunt cum, aliquam harum ab provident, facilis odio at nemo. Quis, accusamus?
+        </p>
+
+        <img src="Coding.jpeg" alt="laptop with coding in the screen" height="300">
+
+        <h2>Monospaced Writing : Source Code</h2>
+            <p>
+                Source code is the text-based set of instructions that programmers write to create software and computer programs.
+            </p>
+            <p>
+                Monospaced writing is a type of text where each character takes up the same amount of horizontal space. In monospaced fonts, like Courier or Consolas, an "i" takes up as much space as a "w," making it easy to align text neatly in rows and columns.
+            </p>
+            <p>
+                Monospace is good for source code because it ensures that each character occupies the same amount of space, making code more readable and organized, especially when aligning text and code elements in columns and rows.
+            </p>
+            <p>
+                Example:
+            </p>
+            <p>
+                function calculateFactorial(n) { <br>
+                    if (n === 0 || n === 1) return 1; <br>
+                    return n * calculateFactorial(n - 1); }
+            </p>
+            <p>
+                Is harder to read than if we use CODE to envelope the code section - makeing it monospaced writing instead.
+            </p>
+            <p>
+                <code>
+                    function calculateFactorial(n) { <br>
+                        if (n === 0 || n === 1) return 1; <br>
+                        return n * calculateFactorial(n - 1); }
+                </code>
+            </p>
+            <p>
+                Another thing is PRE - Keeps text formatting, useful for displaying code blocks.
+                While CODE Styles (monospace) inline code within a sentence.
+            </p>
+            <p>
+                Example (instead of BR we use PRE):
+            </p>
+            <pre>
+                <code>
+function calculateFactorial(n) {
+if (n === 0 || n === 1) return 1;
+return n * calculateFactorial(n - 1); }
+                </code>
+            </pre>
+            <p>
+                Please note that with PRE every space will be counted in the website.
+            </p>
+        <h2>Citations</h2>
+            <h3>Simple Citations</h3>
+                <p>
+                    For Citations you can put the quote "as normal" but there is a bette and <ins>semantic</ins> way to do it: Using Q. <br>
+                    Example: <br>
+                    <q>is Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, facere corporis consequuntur, facilis obcaecati, quidem inventore pariatur labore voluptatem fugit autem vel minima tenetur maiores veniam a necessitatibus sit consequatur?</q> 
+                </p>
+            <h3>Complete Citations</h3>
+                <p>
+                    <strong>Simple Quotes (Q):</strong> Used for short inline quotations within a sentence.
+                </p>
+                <p>
+                    <strong>Block Quotes (BLOCKQUOTE):</strong> Used for longer quotations that are displayed as separate blocks of text, often indented.
+                </p>
+                <p>
+                    Example:
+                    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo rerum corporis, in aut tenetur similique dolorem nam aperiam consectetur assumenda repudiandae reiciendis error rem est numquam iste alias? Sed, odit?</blockquote>
+                </p>
+                <p>
+                    To reference the source of the citation, simply write inside of the opening tag for blockquote <strong><code>"cyte="</code></strong> and paste the source link. <br>
+                    But keep in mind this link will only be visible by search mechanisms like Google. It is good use for giving rights to respective authors.
+                </p>
+        <h2>Abbreviations</h2>
+            <p>
+                <strong>Abbreviations (ABBR):</strong> Used to define abbreviations or acronyms in HTML content. It allows you to provide the full form of the abbreviation as a tooltip for clarity and accessibility.
+            </p>
+            <p>
+                Example:
+                <abbr title="HyperText MarkUp Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>
+            </p>
+        <h2>Inverted Text</h2>
+            <p>
+                Command BDO to invert text from left or right. <br>
+                <bdo dir="ltr">This is an example of LEFT INVERTED TEXT. Normal</bdo> <br>
+                <bdo dir="rtl">This is an example of RIGHT INVERTED TEXT.</bdo>
+            </p>
+            <p>
+                Useful? Hmmm... Nope!
+            </p>
+</body>
+
+</html>
