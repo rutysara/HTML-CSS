@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon-32x32.png" type="image/x-icon">
+    <title>Chapter 9</title>
+    <style>
+        body {
+            background-color: rgb(248, 236, 220);
+        }
+        h1 {
+            color: rgb(214, 81, 3);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h2 {
+            color: rgb(200, 119, 72);
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating Lists (Exercise 6)</h1>
+        <h2>Ordered Lists</h2>
+            <p>
+                HTML element used to create numbered lists. It organizes items in a sequential order, such as steps in a procedure or a ranked list. Each list item is indicated with a number.
+            </p>
+            <p>
+                Ordered lists are important because they help you provide instructions or information in a clear step-by-step order. 
+            </p>
+            <p>
+                For example: When you write down a recipe, using numbers to list the steps ensures that someone can follow the recipe correctly. Without numbers or order, it would be confusing, and the end result might not be what you expect. Ordered lists keep things organized and easy to follow. <br>
+                Another thing is ordered lists automatically number each item, keeping things clear. Adding something in between is easy; you don't have to renumber everything.
+            </p>
+            <ol type="1"> <!--- Options are 1, A, a, I and i -->
+                <li>To create a list type <strong>OL</strong> (Ordered List)
+                <li>To list items, type <strong>LI</strong> 
+                <li>On HTML5 you do not need to close this tag (optional)
+                <li>And on and on!
+                <li>To personalise numbering, simply use <strong>TYPE=</strong> inside opening OL tag.
+            </ol>
+            <p>
+                Second example:
+            </p>
+            <ol type="I">
+                <li>To create a list type OL (Ordered List)
+                <li>To list items, type LI
+                <li>On HTML5 you do not need to close this tag (optional)
+                <li>And on and on!
+                <li>To personalise numbering, simply use TYPE= inside opening OL tag.
+            </ol>
+            <p>
+                You can also tell him to START at a specific number like 4. <br>
+                Third example:
+            </p>
+            <ol type="1" start="4">
+                <li>To create a list type OL (Ordered List)
+                <li>To list items, type LI
+                <li>On HTML5 you do not need to close this tag (optional)
+                <li>And on and on!
+                <li>To personalise numbering, simply use TYPE= inside opening OL tag.
+            </ol>
+        <h2>Unordered Lists</h2>
+            <p>
+                Unordered lists are a way to present information in a bulleted format, without any specific order or sequence.
+            </p>
+            <p>
+                They are used when the order of items doesn't matter, and you want to list them without any numerical or alphabetical indication. Each item in an unordered list is preceded by a <ins>bullet point or another marker</ins>, making it easy to distinguish individual items. Unordered lists are created using the <strong>`UL`</strong> HTML element.
+            </p>
+            <ul type="disc"> <!--- Options are disc, circle and square -->
+                <li>To create a list type <strong>UL</strong> (Ordered List)
+                <li>To list items, type <strong>LI</strong> the same way as ordered lists.
+                <li>And on and on!
+                <li>To personalise numbering, simply use <strong>TYPE=</strong> inside opening UL tag.
+            </ul>
+        <h2>Mixed Lists</h2>
+            <h3>Favorite Cities to Visit</h3>
+                <ol>
+                    <li>Cities I have visited:</li>
+                    <ul type="square">
+                        <li>Recife, Brasil</li>
+                        <li>Salgueiro, Brasil</li>
+                        <li>Porto, Portugal</li>
+                        <li>Lisbon, Portugal</li>
+                        <li>London, UK</li>
+                        <li>Bath,UK</li>
+                        <li>New York, USA</li>
+                        <li>Massachusssets, USA</li>
+                    </ul>
+                    <br>
+                    <li>Coutries or cities I want to visit:</li>
+                    <ul type="square">
+                        <li>South Korea</li>
+                        <li>Thailand</li>
+                        <li>Switzerland</li>
+                        <li>Japan</li>
+                        <li></li>
+                    </ul>
+                </ol>
+</body>
+</html>
