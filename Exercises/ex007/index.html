@@ -1,20 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon/favicon-32x32.png" type="image/x-icon">
     <title>Chapter 10</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        .tags {
+            color: rgb(255, 0, 0);
+        }
+    </style>
 </head>
+
 <body>
     <h1>Links and Anchors (Exercise 7)</h1>
         <h2>External Links</h2>
-            <p>
-                <strong>External Links:</strong> hyperlinks that point to web pages or resources located outside the current website. They are created using the <strong>`A` (anchor)</strong> element and have an `href` attribute specifying the URL of the external page or resource. <br>
-
-                Targets: The `target` attribute in HTML specifies where the linked content should open when clicked. Common values include `_blank` (opens in a new browser tab or window) and `_self` (opens in the same tab or window). <br>
             
-                Rel Attribute: The `rel` attribute in HTML provides additional information about the relationship between the current document and the linked document. For external links, the `rel` attribute can include values like "nofollow" (indicates search engines shouldn't follow the link) or "noopener" (enhances security when opening links in a new tab)
+            <p>
+                <strong>External Links:</strong> hyperlinks that point to web pages or resources located outside the current website. They are created using the <strong class="tags">`A` (anchor)</strong> element and have an <strong class="tags">`HREF`</strong> attribute specifying the URL of the external page or resource. 
             </p>
+            <p>
+                Example: <a href="https://github.com/rutysara" target="_blank" rel="external">My GitHub Repository</a>
+            </p>
+            <p>
+                <strong>Targets:</strong> The <strong class="tags">`target`</strong> attribute in HTML specifies where the linked content should open when clicked. Common values include <strong class="tags">`_blank`</strong> (opens in a new browser tab or window) and <strong>`_self`</strong> (opens in the same tab or window).
+            </p>
+            <p>
+                <ul type="circle">
+                   <li>_blank:
+                    `<a href="https://example.com" target="_blank" rel="external">Visit Example</a>`
+                    <li>_self: `<a href="https://example.com" target="_self" rel="external">Visit Example</a>` 
+                </ul>
+            </p>
+            <p>
+                <strong>Rel Attribute:</strong> Using <strong>"next," "prev," or "external"</strong> values in the <strong class="tags">"rel"</strong> attribute of your links helps web browsers and search engines understand the relationship between different pages on your website, improving navigation and SEO:
+                <ul type="circle">
+                    <li><strong>"next":</strong> Indicates the next page in a sequence, helping users and search engines follow a logical order, such as in paginated content.</li>
+                    <li><strong>"prev":</strong> Indicates the previous page in a sequence, aiding in backward navigation.</li>
+                    <li><strong>"external":</strong> Signals that a link leads to an external website, allowing the browser to handle it appropriately and providing clarity to search engines.</li>
+                    <li><strong>"nofollow":</strong> attribute used in HTML to tell search engines not to follow a particular link. It's often used when you don't want to pass on your website's SEO "credit" or authority to the linked page. It's like saying, <q>I'm linking to this, but I don't vouch for it.</q></li>
+                </ul>
+                These values enhance the user experience and search engine optimization by providing context and structure to your website's content and links.
+            </p>
+            <p>
+                Gustavo recomended rel=external to indicate the network that this link is an external link.
+            </p>
+            <img src="Images/External Link.png" alt="Window A pointing arrow to Window B from a different website" height="300">
+        <h2>Internal Links</h2>
+            <p>
+                <strong>Internal links</strong> are used to connect different pages within the same website or domain. They help users <ins>navigate between related content</ins>, making it easier to find information and explore a website's structure.
+            </p>
+            <p>
+                Examples:
+                <ul>
+                    <li><a href="pg002.html" target="_self" rel="next">Page 2</a></li>
+                    <li><a href="pg003.html" target="_self" rel="next">Page 3</a></li>
+                </ul>
+            </p>
+            <dl>
+                <dt>Note 1:</dt>
+                    <dd>
+                        Learning how to use and implement REL will help the web navigator to search correctly your pages. So indicating if the link is EXTERNAL or is the NEXT or PREVIOUS Internal Page will facilitate everything!
+                    </dd>
+                <dt>Note 2:</dt>
+                    <dd>
+                        If you want to create folders with pages inside you can. Just make sure the path to the webpage is correctly written. <br>
+                        <mark>Also, to go back from a page INSIDE A FOLDER to a page OUTSIDE OF THAT FOLDER YOU HAVE TO USE ../ that tells the navigator to go back.</mark> 
+                    </dd>
+                <dt>Note 3:</dt>
+                    <dd>Do not forget you can also add TARGET=_SELF to indicate the link is from your own webpage and the link can be opened in the same tab or window.</dd>
+            </dl>
+            <img src="Images/Internal Link.png" alt="Window A pointing arrow to Window B from same website" height="300">
 </body>
 </html>
