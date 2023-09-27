@@ -3,14 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Images</title>
+    <title>HTML5 Media</title>
     <style>
         img {
             border-radius: 100%;
         }
+        h1 {
+            padding-top: 10%;
+        }
+        h2 {
+            padding-top: 10%;
+        }
     </style>
 </head>
 <body>
-    <img src="images/photo-s.png">
+    <h1>Dynamic images</h1>
+        <p>
+            Try opening this website in different devices or simply increase or decrease the size of your browser window.
+        </p>
+        <p>
+            Starting with Large as the "main" picture.
+        </p>
+        <picture>
+            <source media="(max-width: 750px)" srcset="images/photo-s.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="images/photo-m.png" type="image/png">
+            <img src="images/photo-l.png">
+        </picture>
+        <br>
+        <p>
+            Now, with the Small as the "main" picture. Main image source still stays at the bottom. However, the order changes: top source media becomes the larger picture.
+        </p>
+        <picture>
+            <source media="(min-width: 1050px)" srcset="images/photo-l.png" type="image/png">
+            <source media="(min-width: 750px)" srcset="images/photo-m.png" type="image/png">
+            <img src="images/photo-s.png">
+        </picture>
+    <h1>Playing Audio in HTML5</h1>
+        <p>
+            Learning how to play audio in HTML5.
+        </p>
+        <ol>
+            <li>
+                <abbr title="audio src=audiolink controls autoplay" >Simplest</abbr> but not very compatible mode: 
+                <br>
+                <audio src="media/Lotus Pond - Aakash Gandhi.mp3" controls utoplay></audio>
+            <br>
+            <li>
+                This <abbr title="Use separate audio tags. Add source:src in between the tags">one</abbr> is more compatible and has the same principle as above. 
+                <br>
+                You add other audio sources types together like OGG and WAV (I do not have other types so only mp3 was used). Put audio types by order that you want the browser to load first.
+                <br>
+                In case no audio is compatible with the browser you can add a paragraph at the end but inside the audio tags to load.
+                <br>
+                <audio preload="metadata" autoplay muted controls loop>
+                    <source src="media/Lotus Pond - Aakash Gandhi.mp3" type="audio/mpeg">
+                    <p>Sadly, your browser is cannot play audio. <a href="media/Lotus Pond - Aakash Gandhi.mp3" download="Lotus-Pond.mp3" type="audio/mpeg">Click here to download the MP3 audio.</a></p>
+                </audio>
+        </ol>
+        <p>
+            Both of these options have very similar attributes, like controls and autoplay, however, it's important to note that many modern web browsers have <strong>restrictions on autoplaying audio</strong>, especially when it's not initiated by user interaction. 
+        </p>
+        <p>
+            Note: WAV is top quality but very heavy and may slow your website. Use it for download only if at all.
+        </p>
+        <p>
+            Reminder how the download attribute works:
+        </p>
+        <p>
+            <a href="media/Lotus Pond - Aakash Gandhi.mp3" download="Lotus_pond.mp3" type="audio/mpeg">Click here to download the audio.</a>
+        </p>
+    <h1>Videos</h1> <!--Compatible Videos are MP4, MKV, WebM and OGV-->
+        <h2 style="padding-top: 2%;">Hosting Videos Locally</h2>
+            <p>
+                This video is hosted in my own server.
+            </p>
+            <p>
+                Exactly as Audio, you have the simple way and a bit more complex. <br>
+                Firstly, I will add the simple way one video type at a time. This will allow me to test its compatibility with different browsers and see the difference (if any) between each video type.
+            </p>
+            <ul type="square">
+                <li>
+                    <strong>MP4</strong> (720p)
+                    <br>&NonBreakingSpace;
+                    <video src="media/my-video-720p.mp4" width="500" controls></video>
+                </li>
+                &NonBreakingSpace;
+                <li>
+                    <strong>MKV</strong> (720p)
+                    <br> &NonBreakingSpace;
+                    <video src="media/my-video-720p.mkv" width="500" controls></video>
+                </li>
+                &NonBreakingSpace;
+                <li>
+                    <strong>WebM</strong> (720p)
+                    <br> &NonBreakingSpace;
+                    <video src="media/my-video-720p.webm" width="500" controls></video>
+                </li>
+                &NonBreakingSpace;
+                <li>
+                    <strong>OGV</strong> (1080p)
+                    <br> &NonBreakingSpace;
+                    <video src="media/my-video.ogv" width="500" controls></video>
+                </li>
+            </ul>
+            <p>
+                All types worked in one go on Chrome. Perfect!
+            </p>
+            <p>
+                Now, the <abbr title="Add video tags and enclose all video types using source:src">"complex"</abbr> way is <ins>exactly</ins> as adding audio. <br>
+                Add video types from smallest size to the biggest.
+                <br>
+                To add a Thumbnail simply add <strong>poster</strong> inside opening video tags.
+            </p>
+            <video width="500" poster="images/Video-thumbnail.png" controls>
+                <source src="media/my-video-720p.webm" type="video/webm">
+                <source src="media/my-video-720p.mkv" type="video/webm">
+                <source src="media/my-video-720p.mp4" type="video/mp4">
+                <source src="media/my-video.ogv" type="video/ogg">
+                <p>Your browser has no compatibility with video playing.</p>
+            </video>
+        <h2 style="color: rgb(255, 0, 0); text-align: center;">Please Note: Videos hosted in Local Server will most likely cause a high data traffic and be very costly to run!</h2>
+        <h2>Hosting External Videos</h2>
+        <p>
+
+        </p>
 </body>
 </html>
